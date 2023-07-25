@@ -1,8 +1,3 @@
-# Nginxapp
-This repository outlines steps to Deploy an Application on ECS Fargate
-
-![Alt text](Nginx-1.PNG)
-
 ## Part 1 - [HOL] Create Image and Push to ECR Repository
 
 Launch EC2 instance - Amazon Linux 2 AMI, t2.micro

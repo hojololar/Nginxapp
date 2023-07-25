@@ -1,0 +1,34 @@
+{
+    "taskDefinition": "ecs-lab:1",
+    "cluster": "fargate-cluster",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:132881721246:targetgroup/TG-1/d93633e4f2f0364e",
+            "containerName": "sample-website",
+            "containerPort": 80
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "FARGATE",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-05784630d7250b343",
+                "subnet-0179d604de8552273",
+                "subnet-0609fa41374b8ede2",
+                "subnet-0be295bb2516998b2",
+                "subnet-089cf9110549033b7",
+                "subnet-092b5d27617c307d0"
+
+            ],
+            "securityGroups": [
+                "sg-05286115a3023b158"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    }
+}
